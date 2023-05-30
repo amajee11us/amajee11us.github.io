@@ -28,6 +28,7 @@ jobs:
     - name: Install and Build 🔧
       run: |
         npm install -g mermaid.cli
+        gem install jekyll bundler
         bundle install
         jekyll serve
     - name: Deploy 🚀
