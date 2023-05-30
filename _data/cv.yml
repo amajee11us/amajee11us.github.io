@@ -1,0 +1,59 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Anay Majee
+    # - name: Date of Birth
+    #   value: 14th March 1879
+    - name: Languages
+      value: English, Hindi, German
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Computer Science
+      institution: The University of Texas at Dallas, Texas, USA
+      year: 2022 - Present
+      description:
+        - PhD candidate in Computer Science for the Intelligent Systems track.
+        - Research Assistant with Prof.Rishabh Iyer at the CARAML lab.
+       
+    - title: B.Tech in Electrical and Electronics Engineering
+      institution: Vellore Institute of Technology, Chennai, India
+      year: 2014-2018
+      description:
+        - Graduated as a gold-medalist in the department by scoring a GPA of 9.68/10.0.
+        - Worked as a Undergrad Researcher at the Smart Grid Lab, advised by Prof. Gnana Swathika O.V.
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Data and Applied Scientist II
+      institution: Microsoft, India
+      year: 2022
+      description:
+        - Developed an Entity Centric Language model to improve identification of products, brands etc. resulting in 12\% revenue gain in Search Advertising.
+        - Mentored an intern to develop an evaluation framework to benchmark entity centric language models which is used across 3+ teams in Microsoft Advertising.
+    - title: Applied Research Scientist
+      institution: Intel, India
+      year: 2018 - 2022
+      description:
+        - Leading the development of Few-Shot Object Detection (FSOD) and Few-Shot Incremental Learning (FSIL) algorithms in Pytorch for detecting rare or unseen road objects in unconstrained driving environments.
+        - Mentored two interns whose work on Few-Shot Object Detection has been submitted to conferences like ICCV and WACV.
+
+    - title: Undergraduate Technical Intern
+      institution: Intel, India
+      year: 2017 - 2018
+      description:
+        - Developed Edge Inferencing framework to deploy Computer Vision models on multiple edge hardwares including Intel Neural Compute Sticks.
+
+- title: Services and Recognitions
+  type: time_table
+  contents:
+    - year: 2023
+      items: 
+        - Delivered a Keynote at VIT Chennai on Virtual Electrical Networks, Seamless Integration and Fault Clearance in Reconfigurable Microgrids.
+        - Appointed a Research Assistant at CARAML lab.
+    - year: 2022
+      items: 
+        - Appointed a Teaching Assistant at Department of Computer Science, UT Dallas.

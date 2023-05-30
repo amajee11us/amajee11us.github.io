@@ -1,6 +1,0 @@
-Microgrids are a collections of loads, small sources and storage systems which are present as single, flexible and independently controllable entities [1]. 
-The inclusion of Distributed Generation (DGs) systems into a microgrid makes the current flow in a microgid bidirectional. 
-The detection of faults and the connection and disconnection of the DGs to and from the microgrid is carried out by the Central Protection Centre (CPC). 
-In this paper we aim to develop an automated CPC based on the concept of Internet of Things (IoT) which would 
-constantly monitor the grid for the detection of faults and rectify them. The rectification of fault is either done by isolating the faulted bus or 
-finding the shortest path from the faulted bus to the main grid.
