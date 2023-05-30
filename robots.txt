@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://amajee11us.github.io/sitemap.xml
