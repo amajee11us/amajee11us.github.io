@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="../static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- LaTeX typesetting-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="../static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SCoRe: Submodular Combinatorial Representation Learning</title>
+  <link rel="icon" type="image/x-icon" href="../static/images/Main_Drawing_NeurIPS.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SCoRe: Submodular Combinatorial Representation Learning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://anaymajee.me" target="_blank">Anay Majee</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://personal.utdallas.edu/~snk170001" target="_blank">Suraj Kothawade</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://krishnatejakillamsetty.me" target="_blank">Krishnateja Killamsetty</a><sup>3</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://sites.google.com/view/rishabhiyer" target="_blank">Rishabh Iyer</a><sup>1</sup>,</span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>The University of Texas at Dallas , <sup>2</sup>Google Research , <sup>3</sup>IBM Research<br>ICML 2024</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2310.00165.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a> -->
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/amajee11us/SCoRe" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2310.00165" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="../static/images/motivation_score.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          SCoRe introduces a <i>family of Submodular combinatorial objectives</i> designed to tackle the challenge of <b>inter-class bias</b> (b) and 
+          <b>intra-class variance</b> (c) demonstrated in Long-tail recognition tasks.
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper we introduce the <b>SCoRe</b> (<b>S</b>ubmodular <b>Co</b>mbinatorial <b>Re</b>presentation Learning) 
+            framework, a novel approach in machine vision representation learning that addresses inter-class bias and intra-class 
+            variance. SCoRe provides a new combinatorial viewpoint to representation learning, by introducing a family of loss 
+            functions based on set-based submodular information measures. We craft two novel combinatorial formulations for loss 
+            functions, that model <i>Total Information</i> and <i>Total Correlation</i>, that naturally minimize intra-class 
+            variance and inter-class bias. Several commonly used metric/contrastive learning loss functions like supervised 
+            contrastive loss, orthagonal projection loss, and N-pairs loss, are all instances of SCoRe, thereby underlining 
+            the versatility and applicability of SCoRe in a broad spectrum of learning scenarios. Novel objectives in SCoRe 
+            naturally model class-imbalance with up to 7.6% improvement in classification on CIFAR-10-LT, CIFAR-100-LT, MedMNIST, 
+            2.1% on ImageNet-LT, and 19.4% in object detection on IDD and LVIS (v1.0), demonstrating its effectiveness over 
+            existing approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Comb Losses -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Inter-Class Bias and Intra-Class variance in Long-tail Recognition</h2>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          Long-tail recognition encompasses both imbalanced and few-shot classification tasks in the presence of both 
+          abundant (head) and rare (tail) classes in the data distribution. This introduces a natural bias towards 
+          the abundant classes and large variance within each abundant class in models trained on such distributions.
+          <i>Representation learning in this space requires a model to learn discriminative features not only from the 
+          abundant classes but also from the rare ones</i>. Unfortunately, models trained on real-world datasets 
+          demonstrate two main challenges - <i>inter-class bias</i> and <i>intra-class variance</i> resulting in 
+          overlapping clusters alongside large cluster variance.
+          <br>
+          <br>
+          <b>Inter-Class bias</b> manifests itself as mis-predictions in rare classes being predicted as one or more of the 
+          visually similar abundant classes. This mis-prediction results from the bias existng in the trained model, towards 
+          the abundant classes demostrating cluster overlaps between head and tail classes in the embedding space as shown in 
+          the figure below.
+        </h2>
+        <!-- Your image here -->
+        <img src="../static/images/inter_class_bias.png" alt="Inter-Class Variance"/>
+        <h2 class="subtitle has-text-centered"><i>Figure 1: Resilience to inter-class variance by objectives in SCoRe. SCoRe objectives like SCoRe-FL show a large 
+          variation to intra-class variance over SoTA approaches like SupCon.
+        </i></h2>
+      </div>
+      <br>
+      <br>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          <b>Intra-Class Variance</b> manifests itself as the large variance within each class (see below figure) resulting 
+          in cluster overlaps between abundannt and rare classes. It also manifests itself as creation of local sub-centers 
+          intensifying the bias of the underlying model towards the head classes resulting in poor performance on the tail classes.
+        </h2>
+        <!-- Your image here -->
+        <img src="../static/images/intra_class_var.png" alt="Intra-Class Variance"/>
+        <h2 class="subtitle has-text-centered"><i>Figure 2: Resilience to intra-class variance by objectives in SCoRe. SCoRe objectives like SCoRe-FL show a large 
+          variation to intra-class variance over SoTA approaches like SupCon.
+        </i></h2>
+      </div>
+      <br>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        Thus, a model trained on long-tail distributions must learn discriminative representations for each class, minimizing the 
+        effect of inter-class bias and intra-class variance.
+      </h2>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Comb Losses -->
+
+<!-- Problem Definition -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Submodular Combinatorial Loss Functions</h2>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        <span style="font-style:italic;">SCoRe</span> introduces a combinatorial viewpoint by defining a dataset 
+        \(\mathcal{T}\) as a collection of sets, \(\mathcal{T} = \{A_1,A_2, \cdots, A_{|C|}\}\) over classes 
+        (now represented as sets \(A_k\)) in \(\mathcal{T}\). Submodular Information functions are set-based 
+        (combinatorial) information theoretic functions which inherently model the properties of <i>diversity</i> 
+        and <i>cooperatiion</i>. 
+        Minimizing a submodular function over a set \(A_k\) reduces cluster variance by modelling cooperation between 
+        samples in a set thereby reducing intra-class variance.
+        Maximizing a submodular function over all sets in the dataset (\(\cup_{k=1}^{|C|} A_k\)) models diversity 
+        between sets resulting in increased inter-cluater separation, reducing the impact of inter-class bias.
+        <br>
+        <br>
+      </h2>
+      <h2 class="title is-4">Designing Combinatorial Losses for Long-tail Recognition</h2>
+      <h2 class="subtitle has-text-justified">
+        Modelling the properties of diversity and cooperation by submodular functions we derive two novel formulations.
+      </h2>
+      <table cellspacing="10">
+        <tr>
+            <td>
+                <img src= "../static/images/Main_Drawing_NeurIPS.png"
+                    alt="Longtail boat in Thailand"
+                    width="2000" height="1500">
+                <h2 class="subtitle has-text-centered"><i>Figure 3 : Combinatorial Objectives and generalization to existing metric/contrastive learners.</i></h2>
+            </td>
+            <td>
+                <h2 class="subtitle has-text-justified">
+                   <b>Total Information</b> (\(L_{S_f}\)) models the total submodular information contained in a set \(A_{k}\). 
+                   Minimizing the total information models cooperation resulting in low intra-class variance.
+                   <br>
+                   <br>
+                   <b>Total Correlation</b> (\(L_{C_f}\)) models the gain in information in set \(A_k\) when new information is 
+                   added to the set. This formulation shown below, encapsulates the total information alongside a diversity term 
+                   over the complete dataset which minimizes inter-cluster overlap.
+                   \[L_{S_f} = \sum_{k= 1}^{|C|} f(A_k ; \theta) \,\,\, ; \,\,\, L_{C_f} = \overset{|C|}{\underset{k=1}{\sum}} f(A_k, \theta) - f(\overset{|C|}{\underset{k=1}{\cup}}A_k, \theta)\]
+                </h2>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        The Total Correlation formulation thus models both inter-class bias and intra-class variance, minimizing which results in learning 
+        of dicriminative representations in long-tail settings.
+        <br>
+        <br>
+        It is interesting to note that existing approaches in metric/ contrastive learning arre either instances of SCoRe or can be re-formulated 
+        into instances SCoRe. Following existing approaches, we adopt pairwise simialrity to model interactions between samples but differ in aggregation
+        of the similarity kernel to compute total information / correlation. Depending on the choice of Submodular function \(f(A_k ; \theta)\) we define 
+        a family of loss functions as shown in Table 1 below. 
+      </h2>
+      <p>
+        <h2 class="subtitle has-text-centered"><i>Table 1 : Summary of family of Objectives in SCoRe and their respective combinatorial properties.</i></h2>
+        \[\begin{array}{l|c|c}
+            \hline
+            \textbf{Objective Function}  & 
+            \textbf{Equation \(L(\theta)\)}& 
+            \textbf{Combinatorial} \\
+             & & \textbf{Property}\\
+            \hline \hline
+            \text{Triplet Loss} & 
+            \sum_{k = 1}^{|C|} \sum_{\substack{i,p \in A_{k}, \\ n \in \mathcal{V} \setminus A_{k}}} \max (0, D_{ip}^2(\theta) - D_{in}^2(\theta) + \epsilon) &
+            \text{Not Submodular} \\
+
+            & & \\
+
+            \text{SNN} &
+            \sum_{k = 1}^{|C|} [-\sum_{i \in A_{k}} {\log \sum_{j \in A_{k}} \exp(S_{ij}(\theta)) - \log\sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta))}] &
+            \text{Not Submodular} \\
+
+            & & \\
+
+            \text{SupCon} &
+            \sum_{k = 1}^{|C|} [\frac{-1}{|A_{k}|} \sum_{i,j \in A_{k}} S_{ij}(\theta) ] + \sum_{i \in A_{k}}[ log (\sum_{j \in \mathcal{V}}S_{ij}(\theta)-1)] &
+            \text{Not Submodular} \\
+
+            & & \\ \hline
+
+            \text{N-Pairs Loss} &
+            \sum_{k = 1}^{|C|} [-{\sum_{i,j \in A_{k}} S_{ij}(\theta) + \sum_{i \in A_{k}} log(\sum_{j \in \mathcal{V}} S_{ij}(\theta) - 1)}] &
+            \text{Submodular} \\
+            
+            & & \\
+
+            \text{OPL} &
+            \sum_{k = 1}^{|C|} ( 1 - \sum_{i,j \in A_{k}} S_{ij}(\theta)) + (\sum_{i \in A_{k}} \sum_{j \in \mathcal{V} \setminus A_{k}} S_{ij}(\theta)) &
+            \text{Submodular} \\
+            
+            & & \\ \hline
+
+            \text{Submod-Triplet} &
+            \sum_{k = 1}^{|C|} \sum_{\substack{i \in A_{k} \\ n \in \mathcal{V} \setminus A_{k}}} S_{in}^{2}(\theta) - \sum_{i,p \in A} S_{ip}^{2}(\theta) &
+            \text{Submodular} \\
+
+            & & \\
+
+            \text{Submod-SNN} &
+            \sum_{k = 1}^{|C|} \sum_{i \in A_{k}} [\log \sum_{j \in A_{k}} \exp(D_{ij}(\theta)) + \log\sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta))] &
+            \text{Submodular} \\
+
+            & & \\
+
+            \text{Submod-SupCon} &
+            \sum_{k = 1}^{|C|} [-{\sum_{i,j \in A_{k}} S_{ij}(\theta) ] + \sum_{i \in A_{k}} [ log (\sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta)) )}] &
+            \text{Submodular} \\
+
+            & & \\ \hline
+
+            \text{SCoRe-GC [\(S_f\)] (ours)} &
+            \sum_{k = 1}^{|C|} \sum_{i \in A_{k}}\sum_{j \in \mathcal{V} \setminus A_{k}}S_{ij}(\theta) - \lambda \sum_{i, j \in A_{k}} S_{ij}(\theta) &
+            \text{Submodular} \\
+
+            & & \\
+
+            \text{SCoRe-GC [\(C_f\)] (ours)} &
+            \sum_{k = 1}^{|C|} \lambda \sum_{i \in A_{k}}\sum_{j \in \mathcal{V} \setminus A_{k}}S_{ij}(\theta) &
+            \text{Submodular} \\
+
+            & & \\
+
+            \text{SCoRe-LogDet [\(S_f\)] (ours)} &
+            \sum_{k = 1}^{|C|} \log \det (S_{A_k}(\theta) + \lambda \mathbb{I}_{|A_k|}) &
+            \text{Submodular} \\ 
+
+            & & \\
+
+            \text{SCoRe-LogDet [\(C_f\)] (ours)} &
+            \sum_{k = 1}^{|C|} \log \det (S_{A_k}(\theta) + \lambda \mathbb{I}_{|A_k|}) - \log \det (S_{\mathcal{V}}(\theta) + \lambda \mathbb{I}_{|\mathcal{V}|}) &
+            \text{Submodular} \\ 
+
+            & & \\
+            
+            \text{SCoRe-FL [\(S_f\) / \(C_f\)] (ours)} &
+            \sum_{k = 1}^{|C|} \sum_{i \in \mathcal{V} \setminus A_{k}} max_{j \in A_{k}} S_{ij}(\theta) &
+            \text{Submodular} \\            
+            \hline
+        \end{array}\]
+      </p>
+      <div class="item">
+        <h2 class="title is-4">What are the benefits of Adopting Combinatorial Objectives ?</h2>
+        <h2 class="subtitle has-text-justified">
+          Objectives introduced in SCoRe demonstrate some unique properties which deliver commendable benefits in learning dicriminative feature representations. 
+          Apart from results discussed in the paper we use synthetic data settings as shown in case 1 through 3 to demonstrate the effectives of SCoRe objectives 
+          under long-tail settings. From case 1 (base case) to case 2 we increase the variance of an abundant (head) cluster while from case 1 to case 3 we increase 
+          the variance of the tail class, both leading to increased overlaps and variance between clusters.
+        </h2>
+          <p>
+            <img src="../static/images/inter_intra_imbalanced.png" alt="Bias and Variance in Long-Tail Recognition"/>
+            <h2 class="subtitle has-text-centered"><i> Figure 4: Resilience to Intra-Class Variance and Inter-Class Bias under the Long-tail setting. 
+              Case 1 demonstrates no intra-class variance and inter-class bias, while case 2 demonstrates larger variance for the head class wile case 3 
+              demonstrates larger variance for the tail class inducing inter-cluster overlaps.</i>
+            </h2>
+          </p>
+        <h2 class="subtitle has-text-justified">
+          Given these settings, we demonstrate the below properties:
+          <br>
+          <br>
+          <ol>
+            <li><b>SCoRe Models Information in a Set</b> The \(L_{S_f}\) formulation models the total information contained in a class (\(A_k\)) while the \(L_{C_f}\) 
+              formulation models the gain in information when new instances are added to \(A_k\). In contrast to existing losses that model sum over similarities 
+              or log-sum over similarities, objectives in SCoRe model information by aggregating pairwise interactions between samples.</li>
+            <br>
+            <li><b>SCoRe-FL demonstrates inherent Class-balancing</b>, equally weighting tail classes in contrast to head ones in model training. Unlike SoTA approaches
+              that scale linearly with the cardinality of the set \(|A_k|\), SCoRe-FL has an inverse relation, and scales with respect to \(\mathcal{V}\setminus A_k\) 
+              (\(\sum_{i \in \mathcal{V} \setminus A_{k}} max_{j \in A_{k}} S_{ij}(\theta)\)). This inherently introduces class balancing critical in long-tail settings.</li>
+            <br>
+            <li><b>SCoRe-LogDet models cluster volume</b> by computing the volume of a feature cluster, minimizing which shrinks the cluster volume resulting in reduced 
+              intra-class variance (\(S_f\) form).</li>
+          </ol>
+        </h2>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Problem Defintion -->
+
+<!-- Results -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Results on Long-tail Recognition benchmarks</h2>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          We perform experiments on several long-tail vision benchmarks to show the effectiveness of objectives in SCoRe towards learning of discriminative class-specific 
+          feature sets. 
+          <br>
+          <br>
+          For <b>Long-tail Recognition</b> task we conduct experiments on CIFAR-10-LT, CIFAR-100-LT and ImageNet-LT. Following real-world benchmarks we introduce two new benchmarks - 
+          CIFAR-10-Step and the MedMNIST dataset which naturally model severe imbalance commonly observed in real-world data.
+          <br>
+          <br> 
+          Applying our objectives demonstrate upto 4.3% in CIFAR-10-LT, 5.7% in CIFAR-100-LT and 2.1% in ImageNet-LT improvement over SoTA methods. We also show that our model converges 
+          relatively faster than SoTA metric/ contrastive learners demonstrating the benefits of adopting a set-based combinatorial viewpoint.
+        </h2>
+        <!-- Your image here -->
+        <img src="../static/images/score_convergence.png" alt="SoTA with SCoRe and Convergence"/>
+      </div>
+      <br>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          For <b>Long-tail Object Detection</b> we perform our experiments on two real-world benchmarks - LVIS (v1.0) and the India Driving Dataset. 
+          We demonstrate a 19.4% improvement in performance (\(mAP\)) for object detection tasks (in IDD).
+        </h2>
+        <!-- Your image here -->
+        <img src="../static/images/idd_perf_dist.png" alt="Object Detection Results"/>
+      </div>
+      <font size="+1">More results on CIFAR-10-LT, CIFAR-100-LT and ImageNet-LT datasets are provided in our paper.</font>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Results -->
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="../static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      If you like our work or use it in your research please feel free to cite it based on the citation below.
+      <pre><code>
+        @inproceedings{score,
+          title = {SCoRe: Submodular Combinatorial Representation Learning},
+          author = {Anay Majee and Suraj Kothawade and Krishnateja Killamsetty and Rishabh Iyer},
+          booktitle = {ICML},
+          year = {2024},
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
