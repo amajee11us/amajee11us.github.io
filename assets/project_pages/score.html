@@ -29,24 +29,24 @@
 
 
   <title>SCoRe: Submodular Combinatorial Representation Learning</title>
-  <link rel="icon" type="image/x-icon" href="../img/Main_Drawing_NeurIPS.png">
+  <link rel="icon" type="image/x-icon" href="../static/images/Main_Drawing_NeurIPS.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="../css/bulma.min.css">
-  <link rel="stylesheet" href="../css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="../css/bulma-slider.min.css">
-  <link rel="stylesheet" href="../css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="../js/fontawesome.all.min.js"></script>
-  <script src="../js/bulma-carousel.min.js"></script>
-  <script src="../js/bulma-slider.min.js"></script>
-  <script src="../js/index.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
 </head>
 <body>
 
@@ -78,7 +78,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://openreview.net/forum?id=G8zDeKOp0R" target="_blank"
+                        <a href="https://arxiv.org/pdf/2310.00165.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -134,7 +134,7 @@
     <div class="hero-body">
       <div class="item">
         <!-- Your image here -->
-        <img src="../img/motivation_score.png" alt="MY ALT TEXT"/>
+        <img src="../static/images/motivation_score.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           SCoRe introduces a <i>family of Submodular combinatorial objectives</i> designed to tackle the challenge of <b>inter-class bias</b> (b) and 
           <b>intra-class variance</b> (c) demonstrated in Long-tail recognition tasks.
@@ -193,7 +193,7 @@
           the figure below.
         </h2>
         <!-- Your image here -->
-        <img src="../img/inter_class_bias.png" alt="Inter-Class Variance"/>
+        <img src="../static/images/inter_class_bias.png" alt="Inter-Class Variance"/>
         <h2 class="subtitle has-text-centered"><i>Figure 1: Resilience to inter-class variance by objectives in SCoRe. SCoRe objectives like SCoRe-FL show a large 
           variation to intra-class variance over SoTA approaches like SupCon.
         </i></h2>
@@ -207,7 +207,7 @@
           intensifying the bias of the underlying model towards the head classes resulting in poor performance on the tail classes.
         </h2>
         <!-- Your image here -->
-        <img src="../img/intra_class_var.png" alt="Intra-Class Variance"/>
+        <img src="../static/images/intra_class_var.png" alt="Intra-Class Variance"/>
         <h2 class="subtitle has-text-centered"><i>Figure 2: Resilience to intra-class variance by objectives in SCoRe. SCoRe objectives like SCoRe-FL show a large 
           variation to intra-class variance over SoTA approaches like SupCon.
         </i></h2>
@@ -250,7 +250,7 @@
       <table cellspacing="10">
         <tr>
             <td>
-                <img src= "../img/Main_Drawing_NeurIPS.png"
+                <img src= "../static/images/Main_Drawing_NeurIPS.png"
                     alt="Longtail boat in Thailand"
                     width="2000" height="1500">
                 <h2 class="subtitle has-text-centered"><i>Figure 3 : Combinatorial Objectives and generalization to existing metric/contrastive learners.</i></h2>
@@ -264,7 +264,7 @@
                    <b>Total Correlation</b> (\(L_{C_f}\)) models the gain in information in set \(A_k\) when new information is 
                    added to the set. This formulation shown below, encapsulates the total information alongside a diversity term 
                    over the complete dataset which minimizes inter-cluster overlap.
-                   \[L_{S_f} = \sum_{k= 1}^{|C|} f(A_k ; \theta) \,\,\, ; \,\,\, L_{C_f} = \overset{|C|}{\underset{k=1}{\sum}} f(A_k, \theta) - f(\overset{|C|}{\underset{k=1}{\cup}}A_k, \theta)\]
+                   \[L_{S_f} = \overset{|C|}{\underset{k=1}{\sum}} \frac{1}{N_f(A_k)}\,\,f(A_k; \theta) \,\,\, ; \,\,\, L_{C_f} = \overset{|C|}{\underset{k=1}{\sum}} \frac{1}{N_f(A_k)}\,\, \Biggl[f(A_k; \theta) - f(\overset{|C|}{\underset{k=1}{\cup}}A_k; \theta)\Biggr]\]
                 </h2>
             </td>
         </tr>
@@ -290,80 +290,80 @@
              & & \textbf{Property}\\
             \hline \hline
             \text{Triplet Loss} & 
-            \sum_{k = 1}^{|C|} \sum_{\substack{i,p \in A_{k}, \\ n \in \mathcal{V} \setminus A_{k}}} \max (0, D_{ip}^2(\theta) - D_{in}^2(\theta) + \epsilon) &
+            \sum_{k = 1}^{|C|}\frac{1}{|A_k|}[ \sum_{\substack{i,p \in A_{k}, \\ n \in \mathcal{V} \setminus A_{k}}} \max (0, D_{ip}^2(\theta) - D_{in}^2(\theta) + \epsilon)] &
             \text{Not Submodular} \\
 
             & & \\
 
-            \text{SNN} &
-            \sum_{k = 1}^{|C|} [-\sum_{i \in A_{k}} {\log \sum_{j \in A_{k}} \exp(S_{ij}(\theta)) - \log\sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta))}] &
-            \text{Not Submodular} \\
-
-            & & \\
-
-            \text{SupCon} &
-            \sum_{k = 1}^{|C|} [\frac{-1}{|A_{k}|} \sum_{i,j \in A_{k}} S_{ij}(\theta) ] + \sum_{i \in A_{k}}[ log (\sum_{j \in \mathcal{V}}S_{ij}(\theta)-1)] &
+            \text{SNN}  &
+            \sum_{k = 1}^{|C|}\frac{-1}{|A_k|}\sum_{i \in A_{k}} {\log \sum_{j \in A_{k}} \exp(S_{ij}(\theta)) + \frac{1}{|A_k|} \log\sum_{\substack{i \in A_{k} \\ j \in \mathcal{V} \setminus A_{k}}} \exp(S_{ij}(\theta))} &
             \text{Not Submodular} \\
 
             & & \\ \hline
 
-            \text{N-Pairs Loss} &
-            \sum_{k = 1}^{|C|} [-{\sum_{i,j \in A_{k}} S_{ij}(\theta) + \sum_{i \in A_{k}} log(\sum_{j \in \mathcal{V}} S_{ij}(\theta) - 1)}] &
+            \text{N-Pairs Loss}  &
+            \sum_{k = 1}^{|C|} \frac{-1}{|A_k|}{\sum_{i,j \in A_{k}} S_{ij}(\theta) + \frac{1}{|A_k|}\sum_{i \in A_{k}} log(\sum_{j \in \mathcal{V}} S_{ij}(\theta) - 1)}  &
             \text{Submodular} \\
             
             & & \\
 
-            \text{OPL} &
-            \sum_{k = 1}^{|C|} ( 1 - \sum_{i,j \in A_{k}} S_{ij}(\theta)) + (\sum_{i \in A_{k}} \sum_{j \in \mathcal{V} \setminus A_{k}} S_{ij}(\theta)) &
+            \text{OPL}  &
+            \sum_{k = 1}^{|C|} \frac{1}{|A_k|}( 1 - \sum_{i,j \in A_{k}} S_{ij}(\theta)) + \frac{1}{|A_k|}\sum_{i \in A_{k}} \sum_{j \in \mathcal{V} \setminus A_{k}} S_{ij}(\theta) &
+            \text{Submodular} \\
+
+            & & \\ 
+            
+            \text{SupCon} &
+            \sum_{k = 1}^{|C|} [\frac{-1}{|A_{k}|} \sum_{i,j \in A_{k}} S_{ij}(\theta) ] + \sum_{i \in A_{k}}\frac{1}{|A_{k}|}\log(\sum_{j \in V}exp(S_{ij}(\theta)) - 1) &
             \text{Submodular} \\
             
             & & \\ \hline
 
             \text{Submod-Triplet} &
-            \sum_{k = 1}^{|C|} \sum_{\substack{i \in A_{k} \\ n \in \mathcal{V} \setminus A_{k}}} S_{in}^{2}(\theta) - \sum_{i,p \in A} S_{ip}^{2}(\theta) &
+            \sum_{k = 1}^{|C|} \frac{1}{|A_k|}\sum_{\substack{i \in A_{k} \\ n \in \mathcal{V} \setminus A_{k}}} S_{in}^{2}(\theta) - \sum_{i,p \in A} S_{ip}^{2}(\theta) &
             \text{Submodular} \\
 
             & & \\
 
             \text{Submod-SNN} &
-            \sum_{k = 1}^{|C|} \sum_{i \in A_{k}} [\log \sum_{j \in A_{k}} \exp(D_{ij}(\theta)) + \log\sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta))] &
+            \sum_{k = 1}^{|C|} \frac{1}{|A_k|}\sum_{i \in A_{k}} [\log \sum_{j \in A_{k}} \exp(D_{ij}(\theta)) + \log\sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta))] &
             \text{Submodular} \\
 
             & & \\
 
-            \text{Submod-SupCon} &
-            \sum_{k = 1}^{|C|} [-{\sum_{i,j \in A_{k}} S_{ij}(\theta) ] + \sum_{i \in A_{k}} [ log (\sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta)) )}] &
+            \text{SupCon-Var} &
+            \sum_{k = 1}^{|C|} \frac{-1}{|A_k|}{\sum_{i,j \in A_{k}} S_{ij}(\theta) + \frac{1}{|A_k|}\sum_{i \in A_{k}} log \sum_{j \in \mathcal{V} \setminus A_{k}} \exp(S_{ij}(\theta))} &
             \text{Submodular} \\
 
             & & \\ \hline
 
-            \text{SCoRe-GC [\(S_f\)] (ours)} &
-            \sum_{k = 1}^{|C|} \sum_{i \in A_{k}}\sum_{j \in \mathcal{V} \setminus A_{k}}S_{ij}(\theta) - \lambda \sum_{i, j \in A_{k}} S_{ij}(\theta) &
+            \text{SCoRe-GC} [S_f] (ours) &
+            \sum_{k = 1}^{|C|} \frac{1}{|A_k|}[\sum_{i \in A_{k}}\sum_{j \in \mathcal{V} \setminus A_{k}}S_{ij}(\theta) - \lambda \sum_{i, j \in A_{k}} S_{ij}(\theta)] &
             \text{Submodular} \\
 
             & & \\
 
-            \text{SCoRe-GC [\(C_f\)] (ours)} &
-            \sum_{k = 1}^{|C|} \lambda \sum_{i \in A_{k}}\sum_{j \in \mathcal{V} \setminus A_{k}}S_{ij}(\theta) &
+            \text{SCoRe-GC} [C_f] (ours) &
+            \sum_{k = 1}^{|C|} \frac{\lambda}{|A_k|}\sum_{i \in A_{k}}\sum_{j \in \mathcal{V} \setminus A_{k}}S_{ij}(\theta) &
             \text{Submodular} \\
 
             & & \\
 
-            \text{SCoRe-LogDet [\(S_f\)] (ours)} &
-            \sum_{k = 1}^{|C|} \log \det (S_{A_k}(\theta) + \lambda \mathbb{I}_{|A_k|}) &
+            \text{SCoRe-LogDet} [S_f] (ours) &
+            \sum_{k = 1}^{|C|} \frac{1}{|A_k|}\log \det (S_{A_k}(\theta) + \lambda \mathbb{I}_{|A_k|}) &
             \text{Submodular} \\ 
 
             & & \\
 
-            \text{SCoRe-LogDet [\(C_f\)] (ours)} &
-            \sum_{k = 1}^{|C|} \log \det (S_{A_k}(\theta) + \lambda \mathbb{I}_{|A_k|}) - \log \det (S_{\mathcal{V}}(\theta) + \lambda \mathbb{I}_{|\mathcal{V}|}) &
+            \text{SCoRe-LogDet} [C_f] (ours) &
+            \sum_{k = 1}^{|C|} \frac{1}{|A_k|}[\log \det (S_{A_k}(\theta) + \lambda \mathbb{I}_{|A_k|}) - \log \det (S_{\mathcal{V}}(\theta) + \lambda \mathbb{I}_{|\mathcal{V}|})] &
             \text{Submodular} \\ 
 
             & & \\
             
-            \text{SCoRe-FL [\(S_f\) / \(C_f\)] (ours)} &
-            \sum_{k = 1}^{|C|} \sum_{i \in \mathcal{V} \setminus A_{k}} max_{j \in A_{k}} S_{ij}(\theta) &
-            \text{Submodular} \\            
+            \text{SCoRe-FL} [C_{f}/ S_{f}] (ours) &
+            \sum_{k = 1}^{|C|} \frac{1}{|\mathcal{V}|}\sum_{i \in \mathcal{V} \setminus A_{k}} max_{j \in A_{k}} S_{ij}(\theta) &
+            \text{Submodular} \\ 
             \hline
         \end{array}\]
       </p>
@@ -376,7 +376,7 @@
           the variance of the tail class, both leading to increased overlaps and variance between clusters.
         </h2>
           <p>
-            <img src="../img/inter_intra_imbalanced.png" alt="Bias and Variance in Long-Tail Recognition"/>
+            <img src="../static/images/inter_intra_imbalanced.png" alt="Bias and Variance in Long-Tail Recognition"/>
             <h2 class="subtitle has-text-centered"><i> Figure 4: Resilience to Intra-Class Variance and Inter-Class Bias under the Long-tail setting. 
               Case 1 demonstrates no intra-class variance and inter-class bias, while case 2 demonstrates larger variance for the head class wile case 3 
               demonstrates larger variance for the tail class inducing inter-cluster overlaps.</i>
@@ -426,7 +426,7 @@
           relatively faster than SoTA metric/ contrastive learners demonstrating the benefits of adopting a set-based combinatorial viewpoint.
         </h2>
         <!-- Your image here -->
-        <img src="../img/score_convergence.png" alt="SoTA with SCoRe and Convergence"/>
+        <img src="../static/images/score_convergence.png" alt="SoTA with SCoRe and Convergence"/>
       </div>
       <br>
       <div class="item">
@@ -435,7 +435,7 @@
           We demonstrate a 19.4% improvement in performance (\(mAP\)) for object detection tasks (in IDD).
         </h2>
         <!-- Your image here -->
-        <img src="../img/idd_perf_dist.png" alt="Object Detection Results"/>
+        <img src="../static/images/idd_perf_dist.png" alt="Object Detection Results"/>
       </div>
       <font size="+1">More results on CIFAR-10-LT, CIFAR-100-LT and ImageNet-LT datasets are provided in our paper.</font>
     </div>
@@ -451,7 +451,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="../pdf/sample.pdf" width="100%" height="550">
+      <iframe  src="../static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
         
       </div>
