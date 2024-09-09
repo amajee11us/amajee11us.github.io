@@ -6,7 +6,7 @@ subtitle: PhD Candidate in Computer Science
 
 profile:
   align: right
-  image: photo_Anay.jpg
+  image: photo_Anay_Majee.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>Located at Dallas, TX</p>
