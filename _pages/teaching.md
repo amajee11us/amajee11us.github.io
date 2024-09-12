@@ -7,10 +7,15 @@ nav: true
 nav_order: 5
 ---
 
-### CS6375 - Machine Learning course
-*Teaching Assistant - Fall 2023*
+### K12 - Instructor for High School Student Research Program
+*Instructor for CARAML lab - Summer 2024*
 
-I will be assisting Prof. Rishabh Iyer with the graduate (PhD level) course `CS6375: Machine Learning` course during Fall 2023 at the University of Texas at Dallas.
+Mentored two high school students towards their Summer Research projects in "Object Detection in Unconstrained Environments" - Aerial and Traffic settings.
+
+### CS4375 - Introduction to Machine Learning course
+*Teaching Assistant - Spring 2024*
+
+I assisted Prof. Rishabh Iyer with the undergraduate course `CS4375: Introduction to Machine Learning` course during Spring 2024 at The University of Texas at Dallas.
 
 ### CS4375 - Introduction to Machine Learning course
 *Teaching Assistant - Fall 2022*
