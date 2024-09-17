@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SMILe: Leveraging Submodular Mutual Information for Robust Few-Shot Object Detection">
+  <meta property="og:title" content="Submodular Mutual Information Learner"/>
+  <meta property="og:description" content="Combinatorial framework for Few-Shot Object Detection"/>
+  <meta property="og:url" content="https://anaymajee.me/assets/project_pages/smile"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="../static/images/Main_Drawing_NeurIPS.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- LaTeX typesetting-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- <meta name="twitter:title" content="SCoRe: Submodular Combinatorial Representation Learning"> -->
+  <!-- <meta name="twitter:description" content="Family of Combinatorial Losses for Long-tail Recognition"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="../static/images/Main_Drawing_NeurIPS.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Few-Shot Learning, Object Detection, Submodular Functions, Representation Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SMILe: Leveraging Submodular Mutual Information for Robust Few-Shot Object Detection</title>
+  <link rel="icon" type="image/x-icon" href="../img/Main_Drawing_NeurIPS.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/bulma.min.css">
+  <link rel="stylesheet" href="../css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="../js/fontawesome.all.min.js"></script>
+  <script src="../js/bulma-carousel.min.js"></script>
+  <script src="../js/bulma-slider.min.js"></script>
+  <script src="../js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SMILe: Leveraging Submodular Mutual Information for Robust Few-Shot Object Detection</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://anaymajee.me" target="_blank">Anay Majee,</span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/ryan-sharp-utdallas/" target="_blank">Ryan Sharp,</span>
+                  <span class="author-block">
+                    <a href="https://sites.google.com/view/rishabhiyer" target="_blank">Rishabh Iyer</a></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">CARAML Lab, The University of Texas at Dallas <br>ECCV 2024</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://eccv.ecva.net/virtual/2024/poster/796" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a> -->
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/amajee11us/SMILe-FSOD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2407.02665" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="../img/smile/overview_smile.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          SMILe introduces a <i>family of Submodular combinatorial objectives based on Submodular Mutual Information</i> designed to tackle the challenge of <b>Class Confusion</b> and 
+          <b>Catastrophic Forgetting</b> in Few-Shot Object Detection (FSOD) tasks.
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Confusion and forgetting of object classes have been challenges of prime interest in Few-Shot Object Detection (FSOD).
+            To overcome these pitfalls in metric learning based FSOD techniques, we introduce a novel <b>S</b>ubmodular <b>M</b>utual <b>I</b>nformation
+            <b>Le</b>arning (<strong>SMILe</strong>) framework for loss functions which adopts combinatorial mutual information functions 
+            as learning objectives to enforce learning of well-separated feature clusters between the base and novel classes. 
+            Additionally, the joint objective in SMILE minimizes the total submodular information contained in a class leading to 
+            discriminative feature clusters. The combined effect of this joint objective demonstrates significant improvements in 
+            class confusion and forgetting in FSOD. Further, we show that SMILe generalizes to several existing approaches in FSOD, 
+            improving their performance, agnostic of the backbone architecture. Experiments on popular FSOD benchmarks, PASCAL-VOC 
+            and MS-COCO, show that our approach generalizes to State-of-the-Art (SoTA) approaches <em>improving their novel class 
+            performance by up to 5.7% (3.3 mAP points) and 5.4% (2.6 mAP points) on the 10-shot setting of VOC (split 3) and 30-shot 
+            setting of COCO datasets</em> respectively. Our experiments also demonstrate better retention of base class performance 
+            and <em>up to 2× faster convergence</em> over existing approaches, agnostic of the underlying architecture.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- SMILe framework description and problem formulation -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">The SMILe Framework</h2>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          SMILe introduces a paradigm shift in FSOD by imbibing a combinatorial viewpoint, where the base dataset, 
+          \(𝐷_{𝑏𝑎𝑠𝑒}= \{ 𝐴_1^𝑏, 𝐴_2^𝑏, …, 𝐴_{|𝐶_𝑏|}^𝑏\}\), containing abundant training examples from \(𝐶_𝑏\) base classes 
+          and the novel dataset, \(𝐷_{𝑛𝑜𝑣𝑒𝑙}=\{𝐴_1^𝑛,  𝐴_2^𝑛,  …,  𝐴_{|𝐶_𝑛|}^𝑛\}\) containing only K-shot (\(𝐴_𝑖^𝑛 = 𝐾\) 
+          for \(𝑖 \in [1, 𝐶_𝑛]\)) training examples from \(𝐶_𝑛\) novel classes.
+          <br>
+          
+          The striking natural imbalance between number of samples in the base and the novel classes leads to confusion between
+          existing (base) and newly added (novel) few-shot classes. We trace the root cause for class confusion to large inter-class 
+          bias between base and novel (K-shot) classes. This results in mis-classification of one or more base classes as novel ones.
+          <br>
+          <br>
+          Further, in a quest to learn the novel classes \(C_n\) the model seldom forgets feature representations corresponding to 
+          the previously learnt base classes. Even though several techniques in FSOD adopt a replay technique (provide K-shot examples 
+          of the base classes during few-shot adaptation) the lack of discriminative features results in catastrophic forgetting of 
+          the base classes.
+          <br>
+          <br>  
+        </h2>
+        <!-- Your image here -->
+        <img src="../img/smile/smile_comb_functions.png" alt="Overcoming Forgetting and Confusion"/>
+        <h2 class="subtitle has-text-centered"><i>Figure 1: Application of SMILe on any existing approach which demonstrates (a) 
+          confusion and forgetting, demonstrates (b) inter-cluster separation, removing class confusion and (c) Fostering intra-class 
+          compactness, improving forgetting.</i></h2>
+      </div>
+      <br>
+      <br>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          SMILe exploits the diminishing returns property of submodular functions to define a novel family of combinatorial objective 
+          (loss) functions \(𝐿_{𝑐𝑜𝑚𝑏} (\theta)\) which enforces orthogonality in the feature space when applied on Region-of-Interest 
+          (RoI) features in FSOD models. The loss function \(𝐿_𝑐𝑜𝑚𝑏 (\theta)\) can be decomposed into two major components - 
+          \(𝑳_{𝒄𝒐𝒎𝒃}^{𝒊𝒏𝒕𝒆𝒓}\) which <b>minimizes inter-class bias between base and novel classes</b> and \(𝑳_{𝒄𝒐𝒎𝒃}^{𝒊𝒏𝒕𝒓𝒂}\) 
+          <b>maximizes intra-class compactness within abundant classes</b>.
+
+          <br>
+          <br>
+          \(𝑳_{𝒄𝒐𝒎𝒃}^{𝒊𝒏𝒕𝒆𝒓}\)  minimizes the mutual information between classes in \(𝐶_𝑛\), minimizing inter-cluster overlaps 
+          between the novel classes. This has been shown to be effective in mitigating class confusion in FSOD.
+          <br>
+          <br>
+          \[ L_{comb}^{inter}(\theta) = \underset{\substack{b \in C_b \\ n \in C_n}}{\sum} I_f(A_b, A_n; \theta) + \underset{\substack{i, j \in C_n \\ i \neq j}}{\sum} I_f(A_i, A_j; \theta) = \underset{\substack{i \in (C_b \cup C_n) \\ j \in C_n : i \neq j}}{\sum}I_f(A_i, A_j; \theta)\]
+          <br>
+          <br>
+          \(𝐋_{𝐜𝐨𝐦𝐛}^{𝐢𝐧𝐭𝐫𝐚}\) minimizes the total submodular information within samples in each class in \(𝐶_𝑏 \cup C_𝑛\) boosting 
+          base class performance asserting the mitigation of catastrophic forgetting.
+          <br>
+          <br>
+          \[L_{comb}^{intra}(\theta) = {\underset{b \in C_b}{\sum}} f(A_b, \theta) + {\underset{n \in C_n}{\sum}} f(A_n, \theta) = {\underset{k \in (C_b \cup C_n)}{\sum}} f(A_k, \theta)\]
+          <br>
+          <br>
+          Encapsulating \(𝐿_{𝑐𝑜𝑚𝑏}^{𝑖𝑛𝑡𝑟𝑎}\)   and \(𝐿_{𝑐𝑜𝑚𝑏}^{𝑖𝑛𝑡𝑒𝑟}\) we define a joint objective \(𝐿_{𝑐𝑜𝑚𝑏}(\theta)\) which 
+          tackles both the challenges of confusion and forgetting.
+          <br>
+          <br>
+          \begin{split}
+            L_{comb}(\theta) =& (1 - \eta) L_{comb}^{intra}(\theta) + \eta L_{comb}^{inter}(\theta) \\
+                    =& {\underset{i \in C_b \cup C_n}{\sum}} \Biggl[(1 - \eta) f(A_i, \theta) + \eta \underset{\substack{j \in C_n \\ i \neq j}}{\sum}I_f(A_i, A_j; \theta) \Biggr]
+          \end{split}
+          <br>
+          <br>
+          The combined effect of \(L_{comb}^{inter}\) and \(L_{comb}^{intra}\) minimizes inter-class bias and intra-class variance 
+          resulting in reduced class confusion and catastrophic forgetting.
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Comb Losses -->
+
+<!-- Catastrophic Forgetting -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Does SMILe Overcome Catastrophic Forgetting ?</h2>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        One of the most significant challenges in FSOD is the elimination of catastrophic forgetting which manifests as the 
+        degradation in the performance of classes in $C_b$ while learning classes in $C_n$. This primarily occurs due to the 
+        lack of discriminative feature representations from instances in $D_{base}$ during the few-shot adaptation (stage 2) stage. 
+        We plot the change in base class performance as the training progresses in existing SoTA methods AGCM and DiGeo against 
+        number of training iterations in Figure 2(a). <b>Our SMILe approach introduced to SoTA approaches like DiGeo outperforms 
+        SoTA base class performance even higher than the roofline</b> establishing the supremacy of \(L_{comb}\) in overcoming 
+        catastrophic forgetting.
+        <br>
+        <br>
+      </h2>
+      <img src="../img/smile/forgetting_convergence.png" alt="Forgetting and Convergence"/>
+      <h2 class="subtitle has-text-centered"><i>Figure 2: <b>Resilience to Catastrophic forgetting and faster convergence in SMILe</b> 
+        over SoTA approaches. (a) shows that combinatorial losses in SMILe are robust to catastrophic forgetting, while (b) shows 
+        that objectives in SMILe results in faster convergence over SoTA FSOD methods (AGCM and DiGeo).</i></h2>
+      <div class="item"></div>
+        <h2 class="subtitle has-text-justified">
+          Additionally, in Figure 2 (b) we observe that application of SMILe objectives to existing methods <b>results in upto 2x faster 
+          convergence</b>. This is primarily due to the adoption of a combinatorial viewpoint which replaces instance based approaches, 
+          popular in literature.
+        </h2>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Problem Defintion -->
+
+<!-- Class Confusion -->
+<section class="hero is-small"> 
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Resilience to Class-Confusion by Objectives in SMILe</h2>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          Figure 3 highlights the supremacy of the proposed SMILe framework in mitigating class confusion through confusion matrix 
+          plots. We compare the confusion between classes in \(C_b \cup C_n\) of SoTA approaches AGCM and DiGeo before and after 
+          introduction of combinatorial objectives in SMILe. 
+          <br>
+          <br>
+          We show that <b>AGCM+SMILe demonstrates 11% lower confusion than AGCM</b> and <b>DiGeo+SMILe shows 4% lower confusion than DiGeo</b>. 
+          This proves the efficacy of combinatorial objectives (\(L_{comb}^{inter}\)) in mitigating inter-class bias, thereby reducing 
+          confusion between classes.  
+        </h2>
+        <!-- Your image here -->
+        <img src="../img/smile/conf_matrix_plots.png" alt="Confusion Matrix plots across methods"/>
+        <h2 class="subtitle has-text-centered"><i>Figure 3: SMILe demonstrates 11% lower confusion over AGCM (a,b) and 4% lower 
+          confusion over DiGeo (c,d). Only significant numbers are highlighted.</i></h2>
+      </div>
+      <br>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          Further from empirical results shown below we observe that SMILe significantly overcomes class confusion resulting from large 
+          inter-class bias between base and novel classes.
+        </h2>
+        <!-- Your image here -->
+        <img src="../img/smile/confusion_empirical_smile.png" alt="Object Detection Results"/>
+      </div>
+      <font size="+1">Quantitative results on PASCAL VOC 1, 5 and 10-shot settings and MS-COCO, 5 and 10-shot settings, 
+        are provided in our paper.</font>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Results -->
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="../pdf/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      If you like our work or use it in your research please feel free to cite it based on the citation below.
+      <pre><code>
+        @inproceedings{smile,
+          title = {SMILe: Leveraging Submodular Mutual Information for Robust Few-Shot Object Detection},
+          author = {Anay Majee and Ryan Sharp and Rishabh Iyer},
+          booktitle = {European Conference on Computer Vision (ECCV)},
+          year = {2024},
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
