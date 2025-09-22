@@ -7,6 +7,17 @@ nav: true
 nav_order: 5
 ---
 
+### Graduate Student Mentor
+*Mentored several students (both academia and industry) towards successful research projects *
+
+1. Amitesh Gangrade (UTDallas, 2024 - 2025) - Work accepted at NeurIPS'25
+
+2. Ryan Sharp (UTDallas, 2023 - 2024) - Work accepted at ECCV'24
+
+3. Ashutosh Agarwal (Intel, 2021 - 2022) - Work accepted at WACV-W'22
+
+4. Anuj Tambwekar (Intel, 2020 - 2021) - Work accepted at ICCV-W'21
+
 ### K12 - Instructor for High School Student Research Program
 *Instructor for CARAML lab - Summer 2024*
 
