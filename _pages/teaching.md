@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 ### Graduate Student Mentor
-*Mentored several students (both academia and industry) towards successful research projects *
+*Mentored several students (both academia and industry) towards successful research projects*
 
 1. Amitesh Gangrade (UTDallas, 2024 - 2025) - Work accepted at NeurIPS'25
 
