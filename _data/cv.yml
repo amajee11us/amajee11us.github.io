@@ -38,19 +38,19 @@
       institution: Dolby Laboratories, San Francisco, CA
       year: 2025
       description:
-        - Developed a Multi-Modal Generative Model (GenAI) for improving Video-Language understanding in long-form video sequences. To be submitted to CVPR'26
-        - Inspired from Live Sports and Cinema content, not all frames in a video is relevant to understanding tasks, we developed a combinatorial approach to identify a set of video segments relevant to answering the question achieving \(\sim\)4\% boost in performance on several Video LLMs.
+        - Developed a Multi-Modal Generative Model (GenAI) for improving Video-Language understanding in long-form video sequences. To be submitted to CVPR'26.
+        - Inspired from Live Sports and Cinema content, not all frames in a video is relevant to understanding tasks, we developed a combinatorial approach to identify a set of video segments relevant to answering the question achieving \(\sim\)4% boost in performance on several Video LLMs.
     - title: Research Intern
       institution: Fujitsu Research of America (FRA), Santa Clara, CA
       year: 2024
       description:
         - Developed a Multi-modal Foundation Model, TabGLM towards cross-table generalization in tabular data. This work has been accepted to AAAI'25.
-        - TabGLM minimizes the consistency between graph (learnt from a \textbf{Graph Transformer} network) and text (learnt from a BART based Large Language Model (LLM) encoder) modalities generated from each record in large tables.
+        - TabGLM minimizes the consistency between graph (learnt from a Graph Transformer network) and text (learnt from a BART based Large Language Model (LLM) encoder) modalities generated from each record in large tables.
     - title: Data and Applied Scientist II
       institution: Microsoft, India
       year: 2022
       description:
-        - Developed an Entity Centric Language model to improve identification of products, brands etc. resulting in 12\% revenue gain in Search Advertising.
+        - Developed an Entity Centric Language model to improve identification of products, brands etc. resulting in 12% revenue gain in Search Advertising.
         - Mentored an intern to develop an evaluation framework to benchmark entity centric language models which is used across 3+ teams in Microsoft Advertising.
     - title: Applied Research Scientist
       institution: Intel, India
