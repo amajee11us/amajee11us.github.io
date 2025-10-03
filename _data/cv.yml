@@ -34,6 +34,18 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Research Intern
+      institution: Dolby Laboratories, San Francisco, CA
+      year: 2025
+      description:
+        - Developed a Multi-Modal Generative Model (GenAI) for improving Video-Language understanding in long-form video sequences. To be submitted to CVPR'26
+        - Inspired from Live Sports and Cinema content, not all frames in a video is relevant to understanding tasks, we developed a combinatorial approach to identify a set of video segments relevant to answering the question achieving \(\sim\)4\% boost in performance on several Video LLMs.
+    - title: Research Intern
+      institution: Fujitsu Research of America (FRA), Santa Clara, CA
+      year: 2024
+      description:
+        - Developed a Multi-modal Foundation Model, TabGLM towards cross-table generalization in tabular data. This work has been accepted to AAAI'25.
+        - TabGLM minimizes the consistency between graph (learnt from a \textbf{Graph Transformer} network) and text (learnt from a BART based Large Language Model (LLM) encoder) modalities generated from each record in large tables.
     - title: Data and Applied Scientist II
       institution: Microsoft, India
       year: 2022
@@ -44,7 +56,7 @@
       institution: Intel, India
       year: 2018 - 2022
       description:
-        - Leading the development of Few-Shot Object Detection (FSOD) and Few-Shot Incremental Learning (FSIL) algorithms in Pytorch for detecting rare or unseen road objects in unconstrained driving environments.
+        - Led the development of Few-Shot Object Detection (FSOD) and Few-Shot Incremental Learning (FSIL) algorithms in Pytorch for detecting rare or unseen road objects in unconstrained driving environments.
         - Mentored two interns whose work on Few-Shot Object Detection has been submitted to conferences like ICCV and WACV.
 
     - title: Undergraduate Technical Intern
@@ -56,8 +68,16 @@
 - title: Services and Recognitions
   type: time_table
   contents:
+    - year: 2025
+      items:
+        - Appointed as a Reviewer for ICCV'25, NeurIPS'25, WACV'26, ICLR'26.
+    - year: 2024
+      items: 
+        - Appointed as a Reviewer for ICLR'25, CVPR'25, WACV'25, TPAMI (journal).
+        - Appointed as a Research Assistant for Fall 25 and Spring 26.
     - year: 2023
       items: 
+        - Appointed as a Reviewer for ICLR'24.
         - Delivered a Keynote at VIT Chennai on Virtual Electrical Networks, Seamless Integration and Fault Clearance in Reconfigurable Microgrids.
         - Appointed a Research Assistant at CARAML lab.
     - year: 2022
