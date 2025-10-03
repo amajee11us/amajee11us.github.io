@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Combinatorial Discovery Guided Representation Learning for Open-World Object Detection">
+  <meta property="og:title" content="CROWD: Combinatorial Open-World Detector"/>
+  <meta property="og:description" content="Combinatorial framework for Open-World Object Detection"/>
+  <meta property="og:url" content="https://anaymajee.me/assets/project_pages/crowd"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="../static/images/thumbnail_smile.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- LaTeX typesetting-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- <meta name="twitter:title" content="SCoRe: Submodular Combinatorial Representation Learning"> -->
+  <!-- <meta name="twitter:description" content="Family of Combinatorial Losses for Long-tail Recognition"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="../static/images/thumbnail_smile.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Open-World Learning, Object Detection, Submodular Functions, Representation Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Looking Beyond the Known: Towards a Data Discovery Guided Open-World Object Detection</title>
+  <link rel="icon" type="image/x-icon" href="../img/thumbnail_crowd.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/bulma.min.css">
+  <link rel="stylesheet" href="../css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="../js/fontawesome.all.min.js"></script>
+  <script src="../js/bulma-carousel.min.js"></script>
+  <script src="../js/bulma-slider.min.js"></script>
+  <script src="../js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Looking Beyond the Known: Towards a Data Discovery Guided Open-World Object Detection</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://anaymajee.me" target="_blank">Anay Majee,</span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/amitesh-gangrade-762778187/" target="_blank">Amitesh Gangrade,</span>
+                  <span class="author-block">
+                    <a href="https://sites.google.com/view/rishabhiyer" target="_blank">Rishabh Iyer</a></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">CARAML Lab, The University of Texas at Dallas <br>NeurIPS 2025</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://neurips.cc/virtual/2025/poster/120090" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a> -->
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/amajee11us/CROWD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2510.00303" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="../img/crowd/overview_crowd.png" alt="CROWD pipeline"/>
+        <h2 class="subtitle has-text-centered">
+            <i>Overall Architecture of <b>CROWD</b> showing our novel combinatorial data-discovery guided representation learning approach to 
+                (a) identify unknown objects and (b) learn distinguishable representations of both known and unknown objects.</i>
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Open-World Object Detection (OWOD) enriches traditional object detectors by enabling continual discovery and integration of unknown objects 
+            via human guidance. However, existing OWOD approaches frequently suffer from semantic confusion between known and unknown classes, alongside 
+            catastrophic forgetting, leading to diminished unknown recall and degraded known-class accuracy. To overcome these challenges, we propose 
+            <b>C</b>ombinato<b>r</b> <b>O</b>pen-<b>W</b>orld <b>D</b>etection (<b>CROWD</b>), a unified framework reformulating unknown object discovery and 
+            adaptation as an interwoven combinatorial (set-based) data-discovery (CROWD-Discover) and representation learning (CROWD-Learn) task. 
+            CROWD-Discover strategically mines unknown instances by maximizing Submodular Conditional Gain (SCG) functions, selecting representative 
+            examples distinctly dissimilar from known objects. Subsequently, CROWD-Learn employs novel combinatorial objectives that jointly disentangle 
+            known and unknown representations while maintaining discriminative coherence among known classes, thus mitigating confusion and forgetting. 
+            Extensive evaluations on OWOD benchmarks illustrate that CROWD achieves improvements of 2.83% and 2.05% in known-class accuracy on M-OWODB 
+            and S-OWODB, respectively, and nearly 2.4x unknown recall compared to leading baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- CROWD framework description and problem formulation -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">The CROWD Framework</h2>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+            CROWD casts Open-World Object Detection (OWOD) as a set-based discovery and learning problem. For each task \(t\), 
+            we view the <i>known</i> object classes as a collection of sets \(K^t\) and aim at grouping all candidate <i>unknowns</i> 
+            into a single pseudo-labeled set \(U^t\) while treating everything else as <i>background</i> \(B^t\). 
+            This viewpoint surfaces two unique challenges in the domain of OWOD -
+            <br>
+            <br>
+            <ol style="padding-left: 40px;">
+                <li> How to <i>identify instances of unlabeled unknown objects</i> \(U^t\) given labeled examples of only known ones in \(K^t\) ?</li>
+                <br>
+                <li>How to effectively learn representations of currently known objects <i>without forgetting the previously known</i> 
+                    (classes introduced in \(T_i\), where \(i < t\)) ones ?</li>
+            </ol>
+            <br>
+            <br>
+        </h2>
+        <!-- Your image here -->
+        <img src="../img/crowd/crowd_high_level_flow.png" alt="CROWD Flow Diagram"/>
+        <h2 class="subtitle has-text-centered"><i>Figure 1: <b>Interleaved Data-Discovery and Representation Learning in CROWD</b> on an incoming task \(T_t\). 
+            CROWD takes as input the model weights from \(T_{t-1}\) and a small replay buffer of previously known classes \(\hat{K}^{t -1}\), applies (a) CROWD-Learn 
+            to discover unknown RoIs and (b) CROWD-L to learn discriminative features of both known and unknown instances to return an updated model \(h^{t+1}\) and 
+            the current task replay buffer \(\hat{K}^t\).</i></h2>
+        <br>
+        <h2 class="subtitle has-text-justified">
+            CROWD achieves this in two stages - namely <b>CROWD-Discover</b> (a.k.a. CROWD-D) and <b>CROWD-Learn</b> (a.k.a. CROWD-L) as 
+            shown in Figure 1. 
+            Given an incoming task \(T_t\) we first train \(h^t(.; \theta)\) on currently known classes in \(D^t\). 
+            At this point, CROWD-D utilizes the frozen model weights of \(h^t\) and uses a small replay buffer (typically containing examples from both 
+            previously known and currently introduced objects) to <em>discover</em> highly representative proposals of unknown classes \(U^t\). 
+            <br>
+            <br>
+            Subsequently, CROWD-L introduces a novel combinatorial learning strategy to rapidly finetune \(h^t\) on this replay buffer 
+            (we adopt the predefined buffer in (Joseph etal., 2021) to distinguish between known classes \(K^t\) and unknown \(U^t\) 
+            while preserving distinguishable features from the previously known classes.
+            <br>
+            <br>
+        </h2>
+      </div>
+      <br>
+      <br>
+    </div>
+    </div>
+    </div>
+</section>
+<!-- End CROWD Formulation -->
+
+<!-- CROWD-D -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Discovering Unknown Backgrounds : CROWD-D</h2>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        CROWD introduces a novel combinatorial viewpoint in OWOD by <b>modeling the identification of unknown instances of a given task as a 
+        data discovery problem</b> (CROWD-D), selecting unknown RoIs which maximize the SCG between and the known object instances.
+      </h2>
+        <img src="../img/crowd/crowd_selection_gccg.png" alt="CROWD-D Selection"/>
+        <h2 class="subtitle has-text-centered"><i>Figure 2: <b>Illustration of the data-discovery pipeline in CROWD-D</b> on a synthetic dataset 
+            with \(|\mathtt{R}| = 500\) and budget \(\mathtt{k} = 10\) and the underlying submodular function as Graph-Cut. CROWD-D selects \(U^t\) 
+            which are both dissimilar to background \(B^t\) and known \(K^t\) instances.</i>
+        </h2>
+      <h2 class="subtitle has-text-justified">
+        <br>
+        <br>
+        <table cellspacing="10">
+            <tr>
+                <td>
+                    <img src= "../img/crowd/crowd_d_algorithm.png"
+                        alt="CROWD algorithm"
+                        width="2000" height="1500">
+                    <h2 class="subtitle has-text-centered"><i>Algorithm 1 : CROWD-D - Data Discovery Algorithm in CROWD.</i></h2>
+                </td>
+                <td>
+                    <h2 class="subtitle has-text-justified">
+                        <ol style="padding-left: 40px;">
+                            Given a set of RoI proposals \(\mathtt{R}\) and a submodular function \(f\) we define the data discovery task (Algorithm 1) 
+                            as a targeted selection problem which selects a set of unknown instances \(U^t\) from \(\mathcal{V} = \mathtt{R} \setminus K^t\) that 
+                            maximizes the SCG \(H_f\) given a query set comprising of known \(K^t\) and the background \(B^t\) instances (line 8 in Algorithm 1). 
+                            This is followed by two key steps - 
+                            <br>
+                            <br>
+                            <li> <b>Identify True Backgrounds</b>: This step follows the intuition that exemplars are largely different from \(K^t\) contains 
+                                potential true backgrounds. We denote them as \(B^t\) (shown in red in Figure 2(b)) and is achieved by maximizing the SCG between
+                                examples in \(\mathtt{R} \setminus K^t\) (denoted as \(\mathcal{V}\)) and knowns \(K^t\).
+                            </li>
+                            <br>
+                            <li><b>Mine Unknowns</b>: From the definition of SCG <i>selected examples in \(U^t\) are largely dissimilar to examples in \(K^t \cup B^t\)</i> 
+                                indicating that they are neither background objects nor visually similar to known objects as shown in Figure 2(c).</li>
+                        </ol>
+                    </h2>
+                </td>
+            </tr>
+        </table>
+        <br>
+        The exclusion thresholds \(\tau_e\) and \(\tau_b\) are empirically determined to be 0.2 and 30% respectively and the underlying submodular function in our experiments 
+        is chosen to be Graph-Cut which has been evidenced in Kothawade et al., 2023 (PRISM) to model both representation and diversity among selected examples.
+        <br>
+        <br>
+      </h2>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End CROWD-D -->
+
+<!-- CROWD-L -->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">CROWD-L : Learning the Unknown Set</h2>
+            <br>
+            <h2 class="subtitle has-text-justified">
+                CROWD also introduces a novel <b>set-based learning paradigm CROWD-L, based on SCG functions which minimizes the cluster overlap 
+                between embeddings of known and unknown objects</b> while retaining the discriminative feature information from the known ones.
+                <br>
+                <br>
+                Given a set of known \(K^t \cup \hat{K}^{t-1}\), unknown \(U^t\) classes alongside a submodular function \(f\) we define a learning objective 
+                \(L_{\text{CROWD}}(\theta)\) as shown in the below equation which jointly minimizes the Submodular Total Information (\(L_{\text{CROWD}}^{self}\)) 
+                over each known class \(K_i^t \in \{K^t \cup \hat{K}^{t-1}\}\) and the SCG between known class \(K^t_i\) and the unknown set \(U^t\) (\(L_{\text{CROWD}}^{cross}\)). 
+                <br>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <h2 class="subtitle has-text-justified">
+                                <ol style="padding-left: 40px;">
+                                    \[L_{\text{CROWD}}^{self}(\theta) = \sum_{i = 1}^{C^t} f(K^t_i; \theta) \]
+                                    <br>
+                                    \[L_{\text{CROWD}}^{cross} (\theta) = \sum_{i = 1}^{C^t} H_f(K^t_i | U^t; \theta) = \sum_{i = 1}^{C^t} f(K^t_i \cup U^t) - f(U^t)\]
+                                    <br>
+                                    \[L_{\text{CROWD}}(\theta) = L_{\text{CROWD}}^{self}(\theta) - \eta L_{\text{CROWD}}^{cross}(\theta)\]
+                                    <br>
+                                </ol>
+                            </h2>
+                        </td>
+                        <td>
+                            <img src= "../img/crowd/crowd_l_process.png"
+                                 alt="CROWD algorithm"
+                                 width="2000" height="1500">
+                            <h2 class="subtitle has-text-centered"><i>Figure 3 : Learning strategy in CROWD-L creating a family of learning objectives for OWOD.</i></h2>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                Note that \(f\) relies on the pairwise interaction between examples in a batch which we represent using cosine similarity 
+                \(s_{ku}(\theta) = \frac{h^t(x_{k}, \theta)^{\text{T}} \cdot h^t(x_{u}, \theta)}{||h^t(x_{k}, \theta)|| \cdot ||h^t(x_{u}, \theta)||}\) and can 
+                be different from the one used in CROWD-D.
+                <br>
+                <br>
+                By varying the choice of \(f\) between popular submodular functions - Facility-Location (FL), Graph-Cut (GC) and Log-Determinant (LogDet) we 
+                introduce a family of loss functions characterized in Figure 4 below. \(L_{\text{CROWD}}\) is applied to the classification head of \(h^t(.; \theta)\) model during all training stages.
+            </h2>
+            <!-- Your image here -->
+            <img src="../img/crowd/crowd_loss_characterization.png" alt="Characteristics of CROWD-L" style="display: block; margin-left: auto; margin-right: auto;"/>
+            <h2 class="subtitle has-text-centered"><i>Figure 4: <b>Characterization of losses in CROWD-L</b> on a synthetic two-cluster imbalanced dataset by increasing 
+                known vs. unknown class separation (cases 1 through 3) similar to the RoI embedding space of \(h^t(.; \theta)\). The synthetic dataset generation is 
+                performed under the same seed.</i></h2>
+        </div>
+    </div>
+</section>
+<!-- End CROWD-L -->
+
+
+<!-- Experimental Results -->
+<section class="hero is-small is-light"> 
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Experimental Results on OWOD Benchmarks</h2>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+            We evaluate our approach on two well established benchmarks  - <b>M-OWOD</b> and <b>S-OWOD</b>. 
+            M-OWOD, (<i>Superclass-Mixed OWOD Benchmark</i>) consists of images from both MS-COCO and PASCAL-VOC 
+            depicting 80 classes grouped into 4 tasks (20 classes per task). 
+            <br>
+            <br>
+            On the other hand, S-OWOD (<i>Superclass-Separated OWOD Benchmark</i>) consists of images from only MS-COCO dataset. 
+            Both benchmarks split the underlying data points into four distinct (non-overlapping) tasks \(T_t\), where \(t \in [1,4]\).
+            <br>
+            <br>
+            <b>CROWD demonstrates \(\sim2.4\times\) increase in unknown recall per task alongside up to 2.8% improvement on M-OWODB and 2.1% 
+            improvement on S-OWODB in known class performance</b> (measured as mAP) over several existing OWOD baselines. 
+            <br>
+            <br>
+          
+        </h2>
+        <!-- Your image here -->
+        <img src="../img/crowd/crowd_quant_results.png" alt="Quantitative Results in CROWD" style="display: block; margin-left: auto; margin-right: auto;"/>
+        <!-- <h2 class="subtitle has-text-centered"><i>Figure 3: SMILe demonstrates 11% lower confusion over AGCM (a,b) and 4% lower 
+          confusion over DiGeo (c,d). Only significant numbers are highlighted.</i></h2> -->
+      </div>
+      <br>
+      <div class="item">
+        <h2 class="subtitle has-text-justified">
+          Further from empirical results shown below we observe that CROWD significantly overcomes confusion between known and unknown classes 
+          while improving performance on already learnt object classes.
+        </h2>
+        <!-- Your image here -->
+        <img src="../img/crowd/crowd_qual_results.png" alt="Open-World Object Detection Qualitative Results"/>
+      </div>
+      <h2 class="subtitle has-text-centered"><b>Qualitative results from CROWD</b> contrasted against OrthogonalDet (previous SoTA method) showing that our approach mitigates 
+        (a) confusion (b) generalizes to unknowns and (c) reduces forgetting.</h2>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Results -->
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="../pdf/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      If you like our work or use it in your research please feel free to cite it based on the citation below.
+      <pre><code>
+        @inproceedings{majee2025crowd,
+          title = {Looking Beyond the Known: Towards a Data Discovery Guided Open-World Object Detection},
+          author = {Anay Majee and Amitesh Gangrade and Rishabh Iyer},
+          booktitle = {The Thirty-ninth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+          year = {2025},
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
